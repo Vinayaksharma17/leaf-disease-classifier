@@ -93,7 +93,7 @@ const ClassificationResult = ({ classification, isClassifying }: ClassificationR
             value={confidencePercent} 
             className="h-3"
             style={{
-              // @ts-ignore
+              // @ts-expect-error Custom CSS property for progress bar color is not recognized by TypeScript
               "--progress-background": info.color,
             }}
           />
@@ -118,7 +118,7 @@ const ClassificationResult = ({ classification, isClassifying }: ClassificationR
                       value={confidence * 100} 
                       className="h-2"
                       style={{
-                        // @ts-ignore
+                        // @ts-expect-error -- Custom CSS property not recognized by TypeScript
                         "--progress-background": diseaseColor,
                       }}
                     />
